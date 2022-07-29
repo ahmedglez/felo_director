@@ -1,0 +1,58 @@
+@import './root.scss';
+
+
+
+nav {
+    font-family: $font_family_primary;
+}
+
+.navbar-brand {
+    top: 57px;
+    left: 184px;
+    width: 214px;
+    height: 38px;
+    text-align: left;
+    font: $font_title;
+    letter-spacing: -0.14px;
+    color: $main_title_brown;
+    opacity: 1;
+    color: inherit;
+}
+.navbar-brand:focus{
+    outline: none;
+    color: inherit;
+}
+.navbar-brand:hover{
+    color: $main_title_brown;
+}
+
+.nav-link {
+    font-family: $font_family_primary;
+    font: $font_link;
+    letter-spacing: 0px;
+    color: $nav_bar_links_color;
+    text-decoration: none;
+    opacity: 1;
+    color: inherit;
+}
+
+
+.nav-link {
+    background:
+        linear-gradient(to right,
+            rgba(100, 200, 200, 0),
+            rgba(100, 200, 200, 0)),
+        linear-gradient(to right,
+            $nav_bar_links_color,
+            $nav_bar_links_color,
+            $nav_bar_links_color);
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.nav-link:hover {
+    background-size: 100% 3px;
+    color: $nav_bar_links_color;
+}

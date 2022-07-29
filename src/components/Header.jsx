@@ -1,29 +1,38 @@
-import React from 'react';
+import '../styles/Header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 	return (
-		<nav class='navbar navbar-expand-lg navbar-light bg-light'>
-			<a class='navbar-brand' href='/'>
-				Navbar
-			</a>
+		<nav className='navbar navbar-expand-lg container  nav-justified'>
+			<Link className='navbar-brand' to='/'>
+				FELO DIRECTOR
+			</Link>
 			<button
-				class='navbar-toggler'
+				className='navbar-toggler'
 				type='button'
 				data-toggle='collapse'
 				data-target='#navbarNavAltMarkup'
 				aria-controls='navbarNavAltMarkup'
 				aria-expanded='false'
 				aria-label='Toggle navigation'>
-				<span class='navbar-toggler-icon'></span>
+				<span className='navbar-toggler-icon'></span>
 			</button>
-			<div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
-				<div class='navbar-nav'>
-					<a class='nav-item nav-link active' href='/'>
-						Home <span class='sr-only'>(current)</span>
-					</a>
-					<a class='nav-item nav-link' href='/about'>
-						Features
-					</a>
+			<div
+				className='collapse navbar-collapse justify-content-end'
+				id='navbarNavAltMarkup'>
+				<div className='navbar-nav'>
+					<Link className='nav-item nav-link active' to='/'>
+						Home <span className='sr-only'>(current)</span>
+					</Link>
+					<Link className='nav-item nav-link' to='/videoclips'>
+						VideoClips
+					</Link>
+					<Link className='nav-item nav-link' to='/equipo'>
+						Equipo
+					</Link>
+					<Link className='nav-item nav-link' to='/contactar'>
+						Contactar
+					</Link>
 				</div>
 			</div>
 		</nav>

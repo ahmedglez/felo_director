@@ -2,7 +2,9 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import Home from '../pages/Home';
-import AboutUs from '../pages/AboutUs';
+import Contact from '../pages/Contact';
+import Equipo from '../pages/Equipo';
+import Videoclips from '../pages/Videoclips';
 import '../styles/App.css';
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
 			<Layout>
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='about' element={<AboutUs />} />
+					<Route path='/contactar' element={<Contact />} />
+					<Route path='/equipo' element={<Equipo />} />
+					<Route path='/videoclips' element={<Videoclips />} />
 				</Routes>
 			</Layout>
 		</div>
