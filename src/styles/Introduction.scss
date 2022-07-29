@@ -43,13 +43,13 @@
     margin-left: 10%;
     justify-self: start;
     width: 60%;
-    text-shadow:  5px 8px 5px #0000008d;
+    text-shadow:  5px 8px 5px #525151b6;
 }
 
 .text-container .title p {
     /* UI Properties */
     text-align: left;
-    font: normal normal bold 65px Noto Sans;
+    font: $font_portada_desktop;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
@@ -75,22 +75,20 @@
 
 .text-container {
     position: absolute;
-    top: 220px;
+    top: 280px;
     width: 100%;
 }
 
 .text-container .title {
-    margin-left: 10%;
-    justify-self: start;
-    width: 50%;
-    text-shadow: 2px 5px 5px #000000b0;
+    justify-self: center;
+    width: 100%;
+    text-shadow: 2px 5px 5px #52505090;
 }
 
 .text-container .title p {
     /* UI Properties */
     text-align: left;
-    font: normal normal bold 45px Noto Sans;
-    letter-spacing: 0px;
+    font: $font_portada_mobile;
     color: #FFFFFF;
     opacity: 1;
 }
