@@ -25,6 +25,7 @@
     background-position: 50% 10%; 
     background-repeat: no-repeat;
     z-index: -1;
+    position: relative;
 }
 
 
@@ -32,11 +33,8 @@
 .text-container {
     width: 90%;
     height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding: 0;
-    padding-left: 5%;
+    position: absolute;
+    top: 15%;
 }
 
 .text-container .title {
@@ -45,7 +43,7 @@
     margin-left: 10%;
     justify-self: start;
     width: 60%;
-    text-shadow: 2px 8px 5px #0000008d;
+    text-shadow:  5px 8px 5px #0000008d;
 }
 
 .text-container .title p {
@@ -62,7 +60,7 @@
     
 .img-container {
     width: 100%;
-    min-height: 550px;
+    min-height: 600px;
     height: fit-content;
     max-height: 700px;
     background-image: url('../assets//imgs/introducction.jpg');
@@ -70,25 +68,21 @@
     background-position: 50% 0%; 
     background-repeat: no-repeat;
     z-index: -1;
+    position: relative;
 }
 
 
 
 .text-container {
-    width: 90%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding: 0;
-    padding-left: 5%;
+    position: absolute;
+    top: 220px;
+    width: 100%;
 }
 
 .text-container .title {
-    margin-top: 105%;
     margin-left: 10%;
     justify-self: start;
-    width: 100%;
+    width: 50%;
     text-shadow: 2px 5px 5px #000000b0;
 }
 
