@@ -10,14 +10,12 @@ import '../styles/App.css';
 function App() {
 	return (
 		<div className='App'>
-			<Layout>
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/contactar' element={<Contact />} />
-					<Route path='/equipo' element={<Equipo />} />
-					<Route path='/videoclips' element={<Videoclips />} />
-				</Routes>
-			</Layout>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/contactar' element={<Contact />} />
+				<Route path='/equipo' element={<Equipo />} />
+				<Route path='/videoclips' element={<Videoclips />} />
+			</Routes>
 		</div>
 	);
 }

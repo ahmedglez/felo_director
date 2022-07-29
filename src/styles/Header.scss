@@ -1,9 +1,33 @@
 @import './root.scss';
 
-
-
 nav {
     font-family: $font_family_primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    z-index: 10;
+}
+
+.navbar button {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 15;
+}
+
+.navbar button span {
+    background-color: $main_title_brown !important;
 }
 
 .navbar-brand {
@@ -18,11 +42,13 @@ nav {
     opacity: 1;
     color: inherit;
 }
-.navbar-brand:focus{
+
+.navbar-brand:focus {
     outline: none;
     color: inherit;
 }
-.navbar-brand:hover{
+
+.navbar-brand:hover {
     color: $main_title_brown;
 }
 
@@ -53,6 +79,55 @@ nav {
 }
 
 .nav-link:hover {
-    background-size: 100% 3px;
+    background-size: 90% 3px;
+    background-position: 50% 100%;
     color: $nav_bar_links_color;
+}
+
+/* media querys */
+@media (max-width: 992px) {    
+
+    nav .navbar-toggler{
+        margin-top: 20px;
+    }
+
+    nav .navbar-brand{
+        width: fit-content;
+        font-size: small;
+    }
+    
+    .navbar-nav {
+        background-color: transparent;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 10%;
+
+    }
+
+    .navbar-collapse a {
+        background-color: $button_background_color;
+    }
+
+    .collapsing {
+        border-radius: 0px 0px 30px 30px;
+    }
+
+
+    .navbar-collapse a:first-child {
+        padding-top: 30%;
+    }
+
+    .navbar-collapse a:last-child {
+        border-radius: 0px 0px 30px 30px;
+
+    }
+
+
+
 }

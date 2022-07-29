@@ -1,9 +1,14 @@
 import '../styles/Header.scss';
+import '../animations/burguerMenu.scss';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+	const handleClick = () => {
+		const NavMenu = document.getElementById('navMenu');
+		NavMenu.classList.toggle('active');
+	};
 	return (
-		<nav className='navbar navbar-expand-lg container  nav-justified'>
+		<nav className='navbar navbar-expand-lg container-fluid pl-lg-5 pr-lg-5 pl-md-5 pr-md-5  '>
 			<Link className='navbar-brand' to='/'>
 				FELO DIRECTOR
 			</Link>
@@ -13,10 +18,15 @@ const Header = () => {
 				data-toggle='collapse'
 				data-target='#navbarNavAltMarkup'
 				aria-controls='navbarNavAltMarkup'
-				aria-expanded='false'
-				aria-label='Toggle navigation'>
-				<span className='navbar-toggler-icon'></span>
+				aria-expanded='true'
+				aria-label='Toggle navigation'
+				id='navMenu'
+				onClick={handleClick}>
+				<span></span>
+				<span></span>
+				<span></span>
 			</button>
+
 			<div
 				className='collapse navbar-collapse justify-content-end'
 				id='navbarNavAltMarkup'>
