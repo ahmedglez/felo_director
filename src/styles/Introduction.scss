@@ -1,33 +1,13 @@
 @import './root.scss';
 
 .introduction-container {
-   position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    z-index: 0;
-
-}
-
-.img-container {
-    width: 100%;
-    min-height: 600px;
-    height: fit-content;
-    max-height: 1200px;
-    background-image: url('../assets//imgs/introducction.jpg');
-    background-size: cover;
-    background-position: 50% 10%; 
+    height: 90vh;
+    background-image: url('../assets/imgs/introducction.jpg');
+    background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
-    position: relative;
+    background-size: cover;
 }
-
 
 
 .text-container {
