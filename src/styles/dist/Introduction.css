@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600;700&display=swap");
+/********Colors********/
+/* backgrounds */
+/* text */
+/********Fonts********/
+.introduction-container {
+  width: 100%;
+  height: 95vh;
+  max-height: 700px;
+  background-image: url("../assets/imgs/introducction.jpg");
+  background-position: 10% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-container {
+  width: 90%;
+  height: fit-content;
+  max-height: 200px;
+  margin-top: 25%;
+}
+
+.text-container .title {
+  margin-left: 10%;
+  justify-self: start;
+  width: 50%;
+  text-shadow: 5px 8px 5px #525151b6;
+}
+
+.text-container .title p {
+  /* UI Properties */
+  text-align: left;
+  font: normal normal bold 55px/88px Noto Sans;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+/* media querys */
+@media screen and (max-width: 768px) {
+  .introduction-container {
+    height: 80vh;
+    min-height: 550px;
+  }
+
+  .text-container {
+    width: 90%;
+    height: fit-content;
+    position: absolute;
+    top: 40%;
+  }
+
+  .text-container .title {
+    margin-bottom: 20px;
+    margin-left: 10%;
+    justify-self: start;
+    width: 100%;
+    text-shadow: 5px 8px 5px #8b8a8ab6;
+  }
+
+  .text-container .title p {
+    /* UI Properties */
+    text-align: left;
+    font: normal normal bold 30px/88px Noto Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+}
