@@ -59,6 +59,7 @@
 .card .info {
   width: 90%;
   position: relative;
+  margin-top: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,6 +104,20 @@
   border-radius: 15px;
   margin: 0 auto;
 }
-.card .videoclip-item_date {
-  margin-bottom: -100px;
+.card .videoclip-item_button {
+  width: 100%;
+  height: fit-content;
+  max-height: 60px;
+  margin-top: 10px;
+  background-color: #FE7575;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.card .videoclip-item_button p {
+  font: normal normal 600 23px/32px Noto Sans;
+  color: white;
+  margin-top: 15px;
 }

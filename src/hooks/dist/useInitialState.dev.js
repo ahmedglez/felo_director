@@ -38,49 +38,49 @@ var initialState = {
     artist: 'Alex Duvall, Kelvis Ochoa, El Micha',
     url: 'https://youtu.be/R7dxbVxbW4A',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 2,
     title: 'Video Clips 2',
     artist: 'Artist 2',
     url: 'https://youtu.be/kcgV4KLeYZk',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 3,
     title: 'Video Clips 3',
     artist: 'Artist 3',
     url: 'https://youtu.be/WVQk_q754DM',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 4,
     title: 'Video Clips 4',
     artist: 'Artist 4',
     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 5,
     title: 'Video Clips 5',
     artist: 'Artist 5',
     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 6,
     title: 'Video Clips 6',
     artist: 'Artist 6',
     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 7,
     title: 'Video Clips 7',
     artist: 'Artist 7',
     url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     image: '',
-    date: '2020-01-01'
+    date: '01-05-2020'
   }, {
     id: 8,
     title: 'Video Clips 8',
