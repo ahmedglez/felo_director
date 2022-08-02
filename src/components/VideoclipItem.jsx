@@ -9,7 +9,7 @@ const VideoclipItem = ({ videoclip }) => {
   };
 
   return (
-    <div className="card col-sm-15 col-lg-5 col-md-5 p-0">
+    <div className="card  p-0" onClick={handleClick}>
       <img src={image} alt="miniatura del video" />
       <div className="info">
         <div className="videoclip-item_title">
@@ -21,9 +21,6 @@ const VideoclipItem = ({ videoclip }) => {
         </div>
         <div className="videoclip-item_date">
           <p>{date}</p>
-        </div>
-        <div className="videoclip-item_button" onClick={handleClick}>
-          <p>Ver video</p>
         </div>
       </div>
     </div>

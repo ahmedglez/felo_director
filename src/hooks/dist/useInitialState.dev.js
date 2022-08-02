@@ -41,37 +41,37 @@ var initialState = {
     date: '01-05-2020'
   }, {
     id: 2,
-    title: 'Video Clips 2',
-    artist: 'Artist 2',
+    title: 'Pedazo de ti',
+    artist: 'Jota Barrios x Kelvis Ochoa',
     url: 'https://youtu.be/kcgV4KLeYZk',
     image: '',
     date: '01-05-2020'
   }, {
     id: 3,
-    title: 'Video Clips 3',
-    artist: 'Artist 3',
+    title: 'Mala Canción de Amor ',
+    artist: 'Jota Barrios',
     url: 'https://youtu.be/WVQk_q754DM',
     image: '',
     date: '01-05-2020'
   }, {
     id: 4,
-    title: 'Video Clips 4',
-    artist: 'Artist 4',
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    title: 'El Bombazo',
+    artist: 'Alex Duvall & Yomil y el Dany',
+    url: 'https://youtu.be/kVOFRptMARE',
     image: '',
     date: '01-05-2020'
   }, {
     id: 5,
-    title: 'Video Clips 5',
-    artist: 'Artist 5',
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    title: 'En Visto',
+    artist: 'LIAM',
+    url: 'https://youtu.be/zrH3TKSi0L4',
     image: '',
     date: '01-05-2020'
   }, {
     id: 6,
     title: 'Video Clips 6',
     artist: 'Artist 6',
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    url: 'https://youtu.be/XfBrGD3yw-Q',
     image: '',
     date: '01-05-2020'
   }, {
@@ -160,7 +160,7 @@ var useInitialState = function useInitialState() {
     var sortedVideoclips = state.videoclips.sort(function (a, b) {
       return new Date(b.date) - new Date(a.date);
     });
-    return sortedVideoclips.slice(0, 5);
+    return sortedVideoclips.slice(0, 6);
   };
 
   var getAllVideoclips = function getAllVideoclips() {

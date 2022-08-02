@@ -4,21 +4,25 @@
 /* text */
 /********Fonts********/
 .card {
-  min-height: 300px;
-  border-radius: 5px;
+  width: 355px !important;
+  min-height: 200px;
+  height: fit-content;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.4s ease-out;
   margin-bottom: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  border-radius: 1px;
+  margin-left: 13px;
+  margin-right: 13px;
   cursor: pointer;
   border-color: transparent;
-  background-color: black;
+  background-color: transparent;
   font-family: "Noto Sans", arial;
   font-size: large;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .card:hover {
   transform: translateY(20px);
@@ -38,21 +42,21 @@
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(30, 1, 1, 0.9);
   z-index: 2;
   transition: 0.5s;
   opacity: 0;
 }
 .card img {
-  cursor: pointer;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 15px;
 }
 .card .info {
   width: 90%;
@@ -68,7 +72,7 @@
   transform: translateY(30px);
   transition: 0.5s;
   text-align: center;
-  font: 22px;
+  font: normal normal bold 22px Noto Sans;
 }
 .card h1 {
   margin: 0px;
@@ -84,7 +88,6 @@
   padding: 0.6rem;
   outline: none;
   border: none;
-  border-radius: 3px;
   background: white;
   color: black;
   font-weight: bold;
@@ -99,7 +102,6 @@
   width: 85%;
   height: 2.5px;
   background-color: #FFFFFFCC;
-  border-radius: 15px;
   margin: 0 auto;
 }
 .card .videoclip-item_button {
@@ -108,7 +110,6 @@
   max-height: 50px;
   margin-top: 10px;
   background-color: #FE7575;
-  border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,3 +121,5 @@
   color: #FFFFFFCC;
   margin-top: 15px;
 }
+
+/* media querys */
