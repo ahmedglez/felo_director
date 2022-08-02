@@ -9,7 +9,7 @@ const VideoclipItem = ({ videoclip }) => {
   };
 
   return (
-    <div className="card col-sm-12 col-lg-5 col-md-5">
+    <div className="card col-sm-15 col-lg-5 col-md-5 p-0">
       <img src={image} alt="miniatura del video" />
       <div className="info">
         <div className="videoclip-item_title">

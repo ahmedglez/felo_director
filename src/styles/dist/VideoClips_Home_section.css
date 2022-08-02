@@ -5,4 +5,34 @@
 /********Fonts********/
 .videoclips-section {
   background-color: #24262B;
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoclips-section_header {
+  text-align: center;
+  color: #FFFFFFCC;
+  font: normal normal bold 18px Noto Sans;
+}
+.videoclips-section_header p {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+
+.videoclips-section_header_icon {
+  color: #FC0441;
+  font-size: 38px;
+  margin-top: -5px;
+}
+
+/* media querys */
+@media screen and (max-width: 868px) {
+  .videoclips-section_header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -8,9 +8,9 @@ const VideoClips_Section = () => {
   const { state } = useContext(AppContext);
   const { videoclips } = state;
   return (
-    <div className="videoclips-section container-fluid m-0 p-0">
-      <div className="videoclips-section_header">
-        <h3>Mis más recientes Video Clips</h3>
+    <div className="videoclips-section container-fluid m-0 p-0 pt-5 justify-content-center ">
+      <div className="videoclips-section_header col-lg-5 col-md-5 col-sm-7 m-0 d-flex  flex-sm-colum mb-5  ">
+        <p className="p-0">Mis más recientes Video Clips</p>
         <BiDownArrowAlt className="videoclips-section_header_icon" />
       </div>
       <div className="videoclips-list container-fluid row justify-content-center m-0 p-0 ">

@@ -16,10 +16,11 @@ $subtitle_gray: #3F3F3F;
 /********Fonts********/
 $font_family_primary: 'Noto Sans',
 arial;
-$font_width_medium: 22px;
-$font_width_big: 28px;
+$font_width_small: normal normal bold 18px Noto Sans;
+$font_width_medium: normal normal bold 22px Noto Sans;
+$font_width_big: normal normal bold 28px Noto Sans;
 $font_title: normal normal bold 28px/37px Noto Sans;
 $font_link: normal normal 600 23px/32px Noto Sans;
 
-$font_portada_desktop: normal normal bold 55px/88px Noto Sans;
+$font_portada_desktop: normal normal bold 48px/88px Noto Sans;
 $font_portada_mobile: normal normal bold 30px/88px Noto Sans;
