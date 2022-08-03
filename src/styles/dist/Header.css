@@ -94,7 +94,7 @@ nav {
 
   nav .navbar-brand {
     width: fit-content;
-    font-size: small;
+    font-size: 1.2em;
   }
 
   .navbar-nav {

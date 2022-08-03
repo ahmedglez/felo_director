@@ -81,5 +81,7 @@
     border-radius: 34px;
     opacity: 1;
     border: none;
+    margin-bottom: 15%;
+    font: normal normal bold 22px/30px Noto Sans !important;
   }
 }

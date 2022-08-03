@@ -32,15 +32,15 @@
   letter-spacing: 0px;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 768px) {
   .recognizedClients h2 {
     font-size: 1.5em;
-    margin-top: 20%;
+    margin-top: 5%;
     line-height: 1.2em;
   }
   .recognizedClients p {
     line-height: 2.2em;
     font-weight: lighter !important;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
