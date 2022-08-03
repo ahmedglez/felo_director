@@ -69,8 +69,8 @@ var initialState = {
     date: '01-05-2020'
   }, {
     id: 6,
-    title: 'Video Clips 6',
-    artist: 'Artist 6',
+    title: 'Artificial',
+    artist: 'LIAM',
     url: 'https://youtu.be/XfBrGD3yw-Q',
     image: '',
     date: '01-05-2020'

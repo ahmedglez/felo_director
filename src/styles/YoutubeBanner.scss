@@ -1,0 +1,98 @@
+@import './root.scss';
+
+
+.youtube_banner-container {
+  height: fit-content;
+  min-height: 250px;
+  background: linear-gradient(to right, $gradient_pink, $gradientpink_soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font_family_primary;
+  text-align: center;
+
+
+  .youtube_banner-text {
+    height: fit-content !important;
+    font: $font_portada_mobile;
+    color: white;
+    max-height: 80px;
+    text-align: center !important;
+    font-size: 1.2em;
+    line-height: 1.2em;
+
+    h2 {
+      font-size: 1.2em;
+      line-height: 1.2em;
+    }
+  }
+
+  .youtube_banner-button {
+    font-size: 0.9em;
+    text-align: center;
+    letter-spacing: 0px;
+    color: red;
+    opacity: 1;
+    letter-spacing: 0px;
+
+
+    button {
+      font: $font_youtube_link;
+      width: 141px;
+      height: 50px;
+      color: $subtitle_gray;
+      /* UI Properties */
+      background: #FFFFFFCC 0% 0% no-repeat padding-box;
+      border-radius: 34px;
+      opacity: 1;
+      border: none;
+      cursor: pointer !important;
+
+
+    }
+  }
+
+}
+
+
+/* media querys */
+@media (max-width: 768px) {
+  .youtube_banner-container {
+    .youtube_banner-text {
+      margin-top: 20%;
+      max-height: min-content;
+
+      h2 {
+        font-size: 1.5em;
+        line-height: 1.2em;
+      }
+    }
+
+    .youtube_banner-button {
+      font-size: 0.9em;
+      text-align: center;
+      letter-spacing: 0px;
+      color: $subtitle_gray !important;
+      text-align: center;
+      font: $font_youtube_link !important;
+      letter-spacing: -0.12px;
+      color: #FFFFFF;
+      opacity: 1;
+      margin-top: 5% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        width: 181px;
+        height: 60px !important;
+        /* UI Properties */
+        background: #FFFFFFCC 0% 0% no-repeat padding-box;
+        border-radius: 34px;
+        opacity: 1;
+        border: none;
+      }
+    }
+  }
+}

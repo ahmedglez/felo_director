@@ -1,7 +1,9 @@
 import React from "react";
 import Introduction from "../containers/Introduction";
 import introduction_image from "../assets/imgs/introducction.jpg";
-import VideoClips_Section from "../containers/VideoClips_Section";
+import VideoClipsSection from "../containers/VideoClipsSection";
+import RecognizedClients from "../containers/RecognizedClients";
+import YoutubeBanner from "../containers/YoutubeBanner";
 import "../styles/Home.scss";
 
 const Home = () => {
@@ -11,7 +13,9 @@ const Home = () => {
         image={introduction_image}
         title="El arte de los detalles"
       />
-      <VideoClips_Section />
+      <VideoClipsSection />
+      <RecognizedClients />
+      <YoutubeBanner />
     </div>
   );
 };

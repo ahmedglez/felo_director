@@ -43,8 +43,7 @@
   cursor: pointer;
   text-decoration: underline;
   font-weight: bold;
-
-
+  text-decoration: none;
 
 
   button {
@@ -53,7 +52,7 @@
     height: 100%;
     border-radius: 25px;
     border-width: 4px;
-    border-color: #FC0441;
+    border-color: $gradient_pink(rgba($color: $gradient_pink, $alpha: 2.0));
     color: $gradient_pink;
     display: flex;
     flex-direction: column;
@@ -65,8 +64,8 @@
     transition-duration: 250ms;
     transition-timing-function: ease-in-out;
     background-color: transparent;
-    outline: none !important;
     font-weight: bold;
+    border-style: solid;
 
 
     p {

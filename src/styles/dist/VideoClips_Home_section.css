@@ -42,6 +42,7 @@
   cursor: pointer;
   text-decoration: underline;
   font-weight: bold;
+  text-decoration: none;
 }
 .videoclips-section_seeMore button {
   width: 28%;
@@ -49,7 +50,7 @@
   height: 100%;
   border-radius: 25px;
   border-width: 4px;
-  border-color: #FC0441;
+  border-color: #FC0441 #fc0441;
   color: #FC0441;
   display: flex;
   flex-direction: column;
@@ -61,8 +62,8 @@
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
   background-color: transparent;
-  outline: none !important;
   font-weight: bold;
+  border-style: solid;
 }
 .videoclips-section_seeMore button p {
   margin-bottom: 0 !important;

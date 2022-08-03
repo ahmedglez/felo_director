@@ -1,12 +1,14 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { BiDownArrowAlt } from "react-icons/bi";
 import VideoclipItem from "../components/VideoclipItem";
 import AppContext from "../context/AppContext";
 import "../styles/VideoClips_Home_section.scss";
 
-const VideoClips_Section = () => {
+const VideoClipsSection = () => {
   const { getRecentVideoclips } = useContext(AppContext);
   const videoclips = getRecentVideoclips();
+  const navigate = useNavigate();
   return (
     <div className="videoclips-section container-fluid m-0 p-0 pt-5 justify-content-center ">
       <div className="videoclips-section_header col-lg-5 col-md-5 col-sm-7 m-0 d-flex  flex-sm-colum mb-4  ">
@@ -19,7 +21,7 @@ const VideoClips_Section = () => {
         ))}
       </div>
       <div className="videoclips-section_seeMore ">
-        <button>
+        <button onClick={() => navigate("/videoclips")}>
           <p>VER MAS</p>
         </button>
       </div>
@@ -27,4 +29,4 @@ const VideoClips_Section = () => {
   );
 };
 
-export default VideoClips_Section;
+export default VideoClipsSection;
