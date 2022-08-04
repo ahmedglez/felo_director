@@ -13,7 +13,6 @@
   border-radius: 1px;
   margin-left: 13px;
   margin-right: 13px;
-  cursor: pointer !important;
   border-color: transparent;
   background-color: transparent;
   font-family: $font_family_primary;
@@ -23,6 +22,7 @@
 
   &:hover {
     transform: translateY(20px);
+
 
 
     &:before {
@@ -58,7 +58,6 @@
   img {
     width: 100%;
     height: 100%;
-    cursor: pointer;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -85,6 +84,8 @@
     font: $font_width_medium;
     cursor: pointer;
 
+
+
   }
 
   h1 {
@@ -99,7 +100,7 @@
   }
 
   button {
-    cursor: pointer;
+
 
     padding: 0.6rem;
     outline: none;
@@ -108,7 +109,7 @@
     background: white;
     color: black;
     font-weight: bold;
-    cursor: pointer;
+
     transition: 0.4s ease;
 
     &:hover {

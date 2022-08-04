@@ -1,11 +1,14 @@
 import React from "react";
 import "../styles/VideoclipItem.scss";
+import { getMiniature } from "../utils/youtube_utilitys";
 
 const VideoclipItem = ({ videoclip }) => {
-  const { title, artist, url, image, date } = videoclip;
+  const { title, artists, link, date } = videoclip;
+  const image = getMiniature(link);
+  var date2 = new Date(date).toLocaleDateString();
 
   const handleClick = () => {
-    window.open(url);
+    window.open(link);
   };
 
   return (
@@ -17,10 +20,10 @@ const VideoclipItem = ({ videoclip }) => {
         </div>
         <div className="separator"></div>
         <div className="videoclip-item_artist">
-          <p>{artist}</p>
+          <p>{artists}</p>
         </div>
         <div className="videoclip-item_date">
-          <p>{date}</p>
+          <p>{date2}</p>
         </div>
       </div>
     </div>

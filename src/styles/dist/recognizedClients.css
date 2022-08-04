@@ -23,6 +23,7 @@
   font-size: 1.2em;
 }
 .recognizedClients p {
+  width: 85%;
   font-size: 0.9em;
   color: #FFFFFFCC;
   text-align: center;

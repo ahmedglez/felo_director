@@ -6,7 +6,7 @@
 .youtube_banner-container {
   height: fit-content;
   min-height: 250px;
-  background: linear-gradient(to right, #FC0441, #FE7575);
+  background: linear-gradient(to right, #fc0441 20%, #FE7575);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,8 @@
 }
 .youtube_banner-container .youtube_banner-text {
   height: fit-content !important;
-  font: normal normal bold 30px/88px Noto Sans;
+  font: normal normal bold 28px/37px Noto Sans;
+  font-weight: bold;
   color: white;
   max-height: 80px;
   text-align: center !important;
@@ -46,6 +47,15 @@
   opacity: 1;
   border: none;
   cursor: pointer !important;
+  transition-duration: 350ms;
+}
+.youtube_banner-container .youtube_banner-button button:hover {
+  background: #ed0808cc 0% 0% no-repeat padding-box;
+  border-radius: 34px;
+  opacity: 1;
+  border: none;
+  color: #FFFFFF;
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.519);
 }
 
 /* media querys */
@@ -55,7 +65,7 @@
     max-height: min-content;
   }
   .youtube_banner-container .youtube_banner-text h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.2em;
   }
   .youtube_banner-container .youtube_banner-button {
@@ -73,9 +83,10 @@
     justify-content: center;
     align-items: center;
   }
-  .youtube_banner-container .youtube_banner-button button {
-    width: 181px;
-    height: 60px !important;
+  .youtube_banner-container button {
+    width: 30%;
+    min-width: 161px;
+    height: 50px !important;
     /* UI Properties */
     background: #FFFFFFCC 0% 0% no-repeat padding-box;
     border-radius: 34px;

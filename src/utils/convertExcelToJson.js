@@ -1,9 +1,9 @@
-const xlsx = require('xlsx');
+/* const xlsx = require('xlsx');
 const fs = require('fs');
 
 function convertExcelFileToJsonUsingXlsx() {
   // Read the file using pathname
-  const file = xlsx.readFile('../src/database/Variables.xlsx');
+  const file = xlsx.readFile('../database/Variables.xlsx');
   // Grab the sheet info from the file
   const sheetNames = file.SheetNames;
   const totalSheets = sheetNames.length;
@@ -24,10 +24,12 @@ function convertExcelFileToJsonUsingXlsx() {
 
 function generateJSONFile(data) {
   try {
-    fs.writeFileSync('data.json', JSON.stringify(data));
+    fs.writeFileSync('../json/data.json', JSON.stringify(data));
+    console.log(data);
   } catch (err) {
     console.error(err);
   }
 }
 
 convertExcelFileToJsonUsingXlsx();
+ */

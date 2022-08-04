@@ -4,6 +4,7 @@ import introduction_image from "../assets/imgs/introducction.jpg";
 import VideoClipsSection from "../containers/VideoClipsSection";
 import RecognizedClients from "../containers/RecognizedClients";
 import YoutubeBanner from "../containers/YoutubeBanner";
+import Footer from "../containers/Footer";
 import "../styles/Home.scss";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <VideoClipsSection />
       <RecognizedClients />
       <YoutubeBanner />
+      <Footer />
     </div>
   );
 };
