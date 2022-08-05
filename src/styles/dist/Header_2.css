@@ -40,7 +40,7 @@ nav {
   text-align: left;
   font: normal normal bold 28px/37px Noto Sans;
   letter-spacing: -0.14px;
-  color: #2B2424;
+  color: #F3F3F3;
   opacity: 1;
   color: inherit;
 }
@@ -51,7 +51,7 @@ nav {
 }
 
 .navbar-brand:hover {
-  color: #2B2424;
+  color: #F3F3F3;
 }
 
 .nav-link {
@@ -94,23 +94,15 @@ nav {
 
   nav .navbar-brand {
     width: fit-content;
-    font-size: small;
+    font-size: 1.2em;
   }
 
   .navbar-nav {
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 85vh;
-    background-color: #FFFFFFCC;
-    filter: opacity(98%);
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar-nav a {
-    margin-bottom: 45px;
-    font-size: large;
   }
 
   .navbar-collapse {
@@ -121,7 +113,20 @@ nav {
     z-index: 10;
   }
 
+  .navbar-collapse a {
+    background-color: #FFFFFFCC;
+  }
+
   .collapsing {
     border-radius: 0px 0px 30px 30px;
+  }
+
+  .navbar-collapse a:first-child {
+    padding-top: 30%;
+  }
+
+  .navbar-collapse a:last-child {
+    border-radius: 0px 0px 30px 30px;
+    padding-bottom: 60px;
   }
 }

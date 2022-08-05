@@ -14,16 +14,16 @@ const Searcher = () => {
   
 
   return (
-    <div className="input-container container input-group mb-3 mt-4">
+    <div className="input-container container-fluid input-group mb-3 mt-4">
       <input
-        className="col-lg-7 col-md-5 col-sm-3 form-control"
+        className="col-lg-7 col-md-7 col-sm-7 form-control"
         type="text"
-        placeholder="Video Musical o Artista"
+        placeholder="Título o Artista"
         aria-label="Search"
         aria-describedby="basic-addon2"
         onChange={handleChange}
       />
-      <div className="input-group-append">
+      <div className="input-container_icon-container mb-0 mt-0 pb-0 pt-0">
         <span className="input-group-text" id="search-btn">
           <BsSearch />
         </span>

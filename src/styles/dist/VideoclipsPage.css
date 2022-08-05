@@ -5,8 +5,38 @@
 /********Fonts********/
 .videoclips-section_container {
   background-color: #24262B;
+  min-height: 100vh;
 }
 
-nav {
-  filter: invert(100%);
+.videoclips-section_container nav {
+  color: #F3F3F3;
+}
+.videoclips-section_container nav .navbar button span {
+  background-color: #F3F3F3 !important;
+}
+.videoclips-section_container nav .navbar-brand {
+  color: #F3F3F3;
+}
+.videoclips-section_container nav .nav-link {
+  background: linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)), linear-gradient(to right, #F3F3F3, #F3F3F3, #F3F3F3);
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+.videoclips-section_container nav .nav-link:hover {
+  background-size: 90% 3px;
+  background-position: 50% 100%;
+  color: #F3F3F3;
+}
+.videoclips-section_container nav span {
+  background-color: #F3F3F3 !important;
+}
+.videoclips-section_container nav .navbar-nav {
+  background-color: #24262B;
+  filter: opacity(98%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }

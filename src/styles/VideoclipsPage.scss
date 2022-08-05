@@ -1,11 +1,55 @@
 @import './root.scss';
 
 
-.videoclips-section_container{
-  background-color:$background_gray_dark ;
+.videoclips-section_container {
+  background-color: $background_gray_dark;
+  min-height: 100vh;
 }
 
-nav{
-  filter: invert(100%);
-}
+.videoclips-section_container nav {
+  color: $nav_links_white;
 
+  .navbar button span {
+    background-color: $nav_links_white !important;
+  }
+
+  .navbar-brand {
+    color: $nav_links_white;
+  }
+
+  .nav-link {
+    background:
+      linear-gradient(to right,
+        rgba(100, 200, 200, 0),
+        rgba(100, 200, 200, 0)),
+      linear-gradient(to right,
+      $nav_links_white,
+      $nav_links_white,
+      $nav_links_white);
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+  .nav-link:hover {
+    background-size: 90% 3px;
+    background-position: 50% 100%;
+    color: $nav_links_white;
+  }
+
+  span {
+    background-color: $nav_links_white !important;
+  }
+
+  .navbar-nav {
+    background-color: $background_gray_dark;
+    filter: opacity(98%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+}
