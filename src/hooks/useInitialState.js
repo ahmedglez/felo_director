@@ -399,7 +399,10 @@ const initialState = {
       link: 'https://www.youtube.com/watch?v=Z-XNDUIziOw',
     },
   ],
+  filter: '',  
 };
+
+initialState.filterList = initialState.videoclips;
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
@@ -443,14 +446,51 @@ const useInitialState = () => {
     });
   };
 
+  const filterVideoclips = (filter) => {
+    if (filter === '') {
+      const allvideos = state.videoclips;
+      setState({
+        ...state,
+        filterList: allvideos,
+        filter: '',
+      });
+    }
+    const filteredVideoclips = state.videoclips.filter((videoclip) => {
+      return (
+        videoclip.title.toLowerCase().includes(filter.toLowerCase()) ||
+        videoclip.artists.toLowerCase().includes(filter.toLowerCase())
+      );
+    });
+    return filteredVideoclips;
+  };
+
+  const getVideoclipsByLimitAndOffset = (limit, offset) => {
+    const sortedVideoclips = state.videoclips.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
+    return sortedVideoclips.slice(offset, offset + limit);
+  };
+
+  const setFilter = (filter) => {
+    setState({
+      ...state,
+      filter: filter,
+      filterList: filterVideoclips(filter),
+    });
+  };
+
   return {
     state,
+    setState,
     getRecentVideoclips,
     getAllVideoclips,
     getVideoclip,
     addVideoclip,
     updateVideoclip,
     deleteVideoclip,
+    filterVideoclips,
+    getVideoclipsByLimitAndOffset,
+    setFilter,
   };
 };
 

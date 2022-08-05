@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600;700&display=swap");
+/********Colors********/
+/* backgrounds */
+/* text */
+/********Fonts********/
+.input-group {
+  width: fit-content;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.input-container input {
+  background-color: #FFFFFFCC;
+}
+.input-container input:focus {
+  background-color: #FFFFFFCC;
+}
+.input-container span {
+  min-height: 56px;
+  background-color: #FFFFFFCC;
+  height: 100%;
+}

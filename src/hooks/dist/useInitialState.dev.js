@@ -360,8 +360,10 @@ var initialState = {
     title: 'Amor Prohibido',
     artists: 'Qva Libre',
     link: 'https://www.youtube.com/watch?v=Z-XNDUIziOw'
-  }]
+  }],
+  filter: ''
 };
+initialState.filterList = initialState.videoclips;
 
 var useInitialState = function useInitialState() {
   var _useState = (0, _react.useState)(initialState),
@@ -411,14 +413,47 @@ var useInitialState = function useInitialState() {
     }));
   };
 
+  var filterVideoclips = function filterVideoclips(filter) {
+    if (filter === '') {
+      var allvideos = state.videoclips;
+      setState(_objectSpread({}, state, {
+        filterList: allvideos,
+        filter: ''
+      }));
+    }
+
+    var filteredVideoclips = state.videoclips.filter(function (videoclip) {
+      return videoclip.title.toLowerCase().includes(filter.toLowerCase()) || videoclip.artists.toLowerCase().includes(filter.toLowerCase());
+    });
+    return filteredVideoclips;
+  };
+
+  var getVideoclipsByLimitAndOffset = function getVideoclipsByLimitAndOffset(limit, offset) {
+    var sortedVideoclips = state.videoclips.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
+    return sortedVideoclips.slice(offset, offset + limit);
+  };
+
+  var setFilter = function setFilter(filter) {
+    setState(_objectSpread({}, state, {
+      filter: filter,
+      filterList: filterVideoclips(filter)
+    }));
+  };
+
   return {
     state: state,
+    setState: setState,
     getRecentVideoclips: getRecentVideoclips,
     getAllVideoclips: getAllVideoclips,
     getVideoclip: getVideoclip,
     addVideoclip: addVideoclip,
     updateVideoclip: updateVideoclip,
-    deleteVideoclip: deleteVideoclip
+    deleteVideoclip: deleteVideoclip,
+    filterVideoclips: filterVideoclips,
+    getVideoclipsByLimitAndOffset: getVideoclipsByLimitAndOffset,
+    setFilter: setFilter
   };
 };
 
