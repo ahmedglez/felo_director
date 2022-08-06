@@ -3,8 +3,12 @@ import "../animations/burguerMenu.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  /* block overflow-y on body doing click */
+
   const handleClick = () => {
     const NavMenu = document.getElementById("navMenu");
+    const Nav = document.getElementsByTagName("nav")[0];
+    Nav.classList.toggle("fixed-top");
     NavMenu.classList.toggle("active");
   };
   return (
@@ -21,7 +25,10 @@ const Header = () => {
         aria-expanded="true"
         aria-label="Toggle navigation"
         id="navMenu"
-        onClick={handleClick}
+        onClick={() => {
+          handleClick();
+        }}
+        
       >
         <span></span>
         <span></span>

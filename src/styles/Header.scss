@@ -12,6 +12,7 @@ nav {
   align-items: center;
   padding: 0;
   z-index: 10;
+
 }
 
 .navbar button {
@@ -92,12 +93,16 @@ nav {
 }
 
 
+.block-scroll {overflow:hidden;}
+
 /* media querys */
 @media (max-width: 992px) {
 
   nav .navbar-toggler {
     margin-top: 20px;
   }
+
+  
 
   nav .navbar-brand {
     width: fit-content;
@@ -109,7 +114,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 85vh;
+    height: 100vh;
     background-color: $button_background_color;
     filter: opacity(98%);
     display: flex;
@@ -117,7 +122,7 @@ nav {
 
     a{
       margin-bottom: 45px;
-      font-size: large;
+      font-size: 1.5em;
     }
   }
 
@@ -125,12 +130,20 @@ nav {
 
 
   .navbar-collapse {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
 
+  }
+
+  .fixed-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
   }
 
   .navbar-collapse a {

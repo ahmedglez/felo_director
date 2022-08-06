@@ -4,11 +4,10 @@ import AppContext from "../context/AppContext";
 import Searcher from "../components/Searcher";
 import Header from "../components/Header";
 import "../styles/VideoclipsPage.scss";
+import NoResults from "../components/NoResults";
 
 const Videoclips = () => {
   const { state } = useContext(AppContext);
-  console.log(state.filterList);
-
   const linksStyle = {
     color: "$nav_links_white",
     background:
@@ -22,9 +21,8 @@ const Videoclips = () => {
       {state.filterList.length > 0 ? (
         <VideoclipList videoclips={state.filterList} />
       ) : (
-        <div className="videoclips-section_no-results">
-          <h1>No results</h1>
-        </div>
+          <NoResults search={state.filter} />
+
       )}
     </div>
   );

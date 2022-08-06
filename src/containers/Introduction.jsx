@@ -4,7 +4,7 @@ import "../styles/Introduction.scss";
 
 const Introduction = ({ image, title }) => {
   return (
-    <div className="introduction-container container-fluid p-0  ">
+    <div className="introduction-container container-fluid p-0  " id="introID">
       <Header />
       <div className="text-container  p-0 ">
         <div className="title  ">

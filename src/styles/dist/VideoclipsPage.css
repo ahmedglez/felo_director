@@ -35,8 +35,4 @@
 .videoclips-section_container nav .navbar-nav {
   background-color: #24262B;
   filter: opacity(98%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
