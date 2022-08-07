@@ -5,16 +5,31 @@ import Searcher from "../components/Searcher";
 import Header from "../components/Header";
 import NoResults from "../components/NoResults";
 import PaginationComponent from "../components/PaginationComponent";
+import Footer from "../containers/Footer";
 import "../styles/VideoclipsPage.scss";
 
 const Videoclips = () => {
   const { state } = useContext(AppContext);
   const [localState, setLocalState] = useState({
     limit: 9,
-    index: 0,
-    offset: 9,
     length: state.filterList.length,
+    currentPage: 0,
   });
+
+  const divideArrays = () => {
+    let array = [];
+    const multiples = parseInt(localState.length / localState.limit);
+    for (let i = 0; i < multiples + 1; i++) {
+      array.push(
+        state.videoclips.slice(i * localState.limit, localState.limit * (i + 1))
+      );
+    }    
+    return array;
+  };
+
+  const [arrays, setArrays] = useState(divideArrays());
+
+
   const linksStyle = {
     color: "$nav_links_white",
     background:
@@ -26,12 +41,7 @@ const Videoclips = () => {
       <Header className="videoclips-section_header " style={linksStyle} />
       <Searcher />
       {state.filterList.length > 0 ? (
-        <VideoclipList
-          videoclips={state.filterList.slice(
-            localState.index,
-            localState.offset
-          )}
-        />
+        <VideoclipList videoclips={arrays[localState.currentPage]} />
       ) : (
         <NoResults search={state.filter} />
       )}
@@ -39,6 +49,7 @@ const Videoclips = () => {
         localState={localState}
         setLocalState={setLocalState}
       />
+      <Footer />
     </div>
   );
 };

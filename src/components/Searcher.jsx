@@ -7,7 +7,6 @@ const Searcher = () => {
   const { setFilter } = useContext(AppContext)
   const handleChange = (e) => {
     setFilter(e.target.value);
-    console.log(e);
   }
   
 

@@ -1,3 +1,4 @@
+
 const initialState = {
   videoclips: [
     {
@@ -399,7 +400,11 @@ const initialState = {
   ],
   filter: '',
 };
-const array = []
+const localState = {
+  limit: 9,
+  index: 0,
+  offset: 9,
+  length: initialState.videoclips.length,
+};
 
-const spliteArray = initialState.videoclips.slice(0,10)
-console.log(spliteArray)
+

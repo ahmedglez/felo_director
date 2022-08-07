@@ -4,6 +4,21 @@
 .videoclips-section_container {
   background-color: $background_gray_dark;
   min-height: 100vh;
+
+  .footer-container{
+    background-color: $background_gray_dark;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    h3{
+      color: $nav_links_white;
+    }
+    p{
+      color: $button_background_color;
+    }
+
+
+  }
 }
 
 .videoclips-section_container nav {

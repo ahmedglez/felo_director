@@ -7,6 +7,18 @@
   background-color: #24262B;
   min-height: 100vh;
 }
+.videoclips-section_container .footer-container {
+  background-color: #24262B;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.videoclips-section_container .footer-container h3 {
+  color: #F3F3F3;
+}
+.videoclips-section_container .footer-container p {
+  color: #FFFFFFCC;
+}
 
 .videoclips-section_container nav {
   color: #F3F3F3;

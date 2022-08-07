@@ -25,7 +25,6 @@ function convertExcelFileToJsonUsingXlsx() {
 function generateJSONFile(data) {
   try {
     fs.writeFileSync('../json/data.json', JSON.stringify(data));
-    console.log(data);
   } catch (err) {
     console.error(err);
   }

@@ -10,7 +10,6 @@ import '../styles/App.css';
 
 const App = () => {
   const initialState = useInitialState();
-  console.log(initialState.state);
   return (
     <AppContext.Provider value={initialState}>
       <Routes>

@@ -334,6 +334,9 @@ var initialState = {
   }],
   filter: ''
 };
-var array = [];
-var spliteArray = initialState.videoclips.slice(0, 10);
-console.log(spliteArray);
+var localState = {
+  limit: 9,
+  index: 0,
+  offset: 9,
+  length: initialState.videoclips.length
+};
