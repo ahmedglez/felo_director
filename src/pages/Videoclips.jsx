@@ -3,11 +3,18 @@ import VideoclipList from "../components/VideoclipList";
 import AppContext from "../context/AppContext";
 import Searcher from "../components/Searcher";
 import Header from "../components/Header";
-import "../styles/VideoclipsPage.scss";
 import NoResults from "../components/NoResults";
+import PaginationComponent from "../components/PaginationComponent";
+import "../styles/VideoclipsPage.scss";
 
 const Videoclips = () => {
   const { state } = useContext(AppContext);
+  const [localState, setLocalState] = useState({
+    limit: 9,
+    index: 0,
+    offset: 9,
+    length: state.filterList.length,
+  });
   const linksStyle = {
     color: "$nav_links_white",
     background:
@@ -19,11 +26,19 @@ const Videoclips = () => {
       <Header className="videoclips-section_header " style={linksStyle} />
       <Searcher />
       {state.filterList.length > 0 ? (
-        <VideoclipList videoclips={state.filterList} />
+        <VideoclipList
+          videoclips={state.filterList.slice(
+            localState.index,
+            localState.offset
+          )}
+        />
       ) : (
-          <NoResults search={state.filter} />
-
+        <NoResults search={state.filter} />
       )}
+      <PaginationComponent
+        localState={localState}
+        setLocalState={setLocalState}
+      />
     </div>
   );
 };
