@@ -1,13 +1,7 @@
 import React from "react";
 import "../styles/YoutubeBanner.scss";
 
-const YoutubeBanner = () => {
-  const handleClick = () => {
-    window.open(
-      "https://www.youtube.com/channel/UCl8y2mIN_7pArnrAND5qkqg",
-      "_blank"
-    );
-  };
+const YoutubeBanner = () => { 
 
   return (
     <div className="youtube_banner-container container-fluid pb-2 d-flex flex-lg-row flex-md-row flex-sm-column justify-content-lg-between ">

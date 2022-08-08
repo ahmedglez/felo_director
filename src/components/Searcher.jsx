@@ -5,15 +5,11 @@ import AppContext from "../context/AppContext";
 import "../styles/Searcher.scss";
 
 const Searcher = () => {
-  const { setFilter, state } = useContext(AppContext)
-  const handleChange = (e) => {
-    setFilter(e.target.value);
-    console.log(state.filter);
-    console.log(state.filterList);
-  }
- 
+  const { setFilter, state } = useContext(AppContext);
 
-  
+  const handleChange = (e) => {    
+    setFilter(e.target.value);
+  };
 
   return (
     <div className="searcher-container container-fluid input-group mb-5 mt-4 ">

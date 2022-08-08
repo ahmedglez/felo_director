@@ -506,6 +506,7 @@ const useInitialState = () => {
   const setFilter = (filter) => {
     setState({
       ...state,
+      currentPage: 0,
       filter: filter,
     });
   };

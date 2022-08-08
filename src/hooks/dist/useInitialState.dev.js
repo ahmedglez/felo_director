@@ -472,6 +472,7 @@ var useInitialState = function useInitialState() {
 
   var setFilter = function setFilter(filter) {
     setState(_objectSpread({}, state, {
+      currentPage: 0,
       filter: filter
     }));
   };
