@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600;700&display=swap");
+/********Colors********/
+/* backgrounds */
+/* text */
+/********Fonts********/
+.searchCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  margin-top: -10%;
+  font-family: "Noto Sans", arial;
+}
+.searchCount h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}

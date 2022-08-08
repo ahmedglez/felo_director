@@ -1,13 +1,18 @@
+import { stat } from "fs";
 import { useContext, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import AppContext from "../context/AppContext";
 import "../styles/Searcher.scss";
 
 const Searcher = () => {
-  const { setFilter } = useContext(AppContext)
+  const { setFilter, state } = useContext(AppContext)
   const handleChange = (e) => {
     setFilter(e.target.value);
+    console.log(state.filter);
+    console.log(state.filterList);
   }
+ 
+
   
 
   return (
@@ -19,7 +24,7 @@ const Searcher = () => {
           placeholder="Título o Artista"
           aria-label="Search"
           aria-describedby="basic-addon2"
-          onInput={handleChange}
+          onChange={handleChange}
         ></input>
         <div className="input-container_icon-container ">
           <BsSearch />

@@ -361,15 +361,44 @@ var initialState = {
     artists: 'Qva Libre',
     link: 'https://www.youtube.com/watch?v=Z-XNDUIziOw'
   }],
-  filter: ''
+  filter: '',
+  limit: 9,
+  filterList: [],
+  fragmetList: [],
+  currentPage: 0
 };
 initialState.filterList = initialState.videoclips;
+
+var fragmet = function fragmet(value) {
+  var list = [];
+
+  for (var i = 0; i < value.filterList.length; i += value.limit) {
+    list.push(value.filterList.slice(i, i + value.limit));
+  }
+
+  return list;
+};
+
+initialState.fragmetList = fragmet(initialState);
 
 var useInitialState = function useInitialState() {
   var _useState = (0, _react.useState)(initialState),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
       setState = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    var filterList = state.videoclips.filter(function (item) {
+      return item.title.toLowerCase().includes(state.filter.toLowerCase()) || item.artists.toLowerCase().includes(state.filter.toLowerCase());
+    });
+    var fragmetList = fragmet(_objectSpread({}, state, {
+      filterList: filterList
+    }));
+    setState(_objectSpread({}, state, {
+      filterList: filterList,
+      fragmetList: fragmetList
+    }));
+  }, [state, state.filter]);
 
   var getRecentVideoclips = function getRecentVideoclips() {
     var sortedVideoclips = state.videoclips.sort(function (a, b) {
@@ -413,6 +442,12 @@ var useInitialState = function useInitialState() {
     }));
   };
 
+  var setFilterVideoclips = function setFilterVideoclips(videoclips) {
+    setState(_objectSpread({}, state, {
+      filterList: videoclips
+    }));
+  };
+
   var filterVideoclips = function filterVideoclips(filter) {
     if (filter === '') {
       var allvideos = state.videoclips;
@@ -425,7 +460,7 @@ var useInitialState = function useInitialState() {
     var filteredVideoclips = state.videoclips.filter(function (videoclip) {
       return videoclip.title.toLowerCase().includes(filter.toLowerCase()) || videoclip.artists.toLowerCase().includes(filter.toLowerCase());
     });
-    return filteredVideoclips;
+    setFilterVideoclips(filteredVideoclips);
   };
 
   var getVideoclipsByLimitAndOffset = function getVideoclipsByLimitAndOffset(limit, offset) {
@@ -437,8 +472,13 @@ var useInitialState = function useInitialState() {
 
   var setFilter = function setFilter(filter) {
     setState(_objectSpread({}, state, {
-      filter: filter,
-      filterList: filterVideoclips(filter)
+      filter: filter
+    }));
+  };
+
+  var setCurrentPage = function setCurrentPage(page) {
+    setState(_objectSpread({}, state, {
+      currentPage: page
     }));
   };
 
@@ -453,7 +493,9 @@ var useInitialState = function useInitialState() {
     deleteVideoclip: deleteVideoclip,
     filterVideoclips: filterVideoclips,
     getVideoclipsByLimitAndOffset: getVideoclipsByLimitAndOffset,
-    setFilter: setFilter
+    setFilter: setFilter,
+    setFilterVideoclips: setFilterVideoclips,
+    setCurrentPage: setCurrentPage
   };
 };
 

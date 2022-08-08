@@ -10,26 +10,7 @@ import "../styles/VideoclipsPage.scss";
 
 const Videoclips = () => {
   const { state } = useContext(AppContext);
-  const [localState, setLocalState] = useState({
-    limit: 9,
-    length: state.filterList.length,
-    currentPage: 0,
-  });
-
-  const divideArrays = () => {
-    let array = [];
-    const multiples = parseInt(localState.length / localState.limit);
-    for (let i = 0; i < multiples + 1; i++) {
-      array.push(
-        state.videoclips.slice(i * localState.limit, localState.limit * (i + 1))
-      );
-    }    
-    return array;
-  };
-
-  const [arrays, setArrays] = useState(divideArrays());
-
-
+  const [currentPage, setCurrentPage] = useState(0);
   const linksStyle = {
     color: "$nav_links_white",
     background:
@@ -39,16 +20,20 @@ const Videoclips = () => {
   return (
     <div className="videoclips-section_container container-fluid p-0">
       <Header className="videoclips-section_header " style={linksStyle} />
-      <Searcher />
+      <Searcher />      
       {state.filterList.length > 0 ? (
-        <VideoclipList videoclips={arrays[localState.currentPage]} />
+        <VideoclipList videoclips={state.fragmetList[state.currentPage]} />
       ) : (
         <NoResults search={state.filter} />
       )}
-      <PaginationComponent
-        localState={localState}
-        setLocalState={setLocalState}
-      />
+      {state.fragmetList.length > 1 ? (
+        <PaginationComponent
+          currentPage={currentPage}
+          length={state.fragmetList.length}
+          limit={state.limit}
+          setCurrentPage={setCurrentPage}
+        />
+      ) : null}
       <Footer />
     </div>
   );

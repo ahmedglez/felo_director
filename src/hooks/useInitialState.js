@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const initialState = {
   videoclips: [
@@ -399,13 +399,37 @@ const initialState = {
       link: 'https://www.youtube.com/watch?v=Z-XNDUIziOw',
     },
   ],
-  filter: '',  
+  filter: '',
+  limit: 9,
+  filterList: [],
+  fragmetList: [],
+  currentPage: 0,
+};
+initialState.filterList = initialState.videoclips;
+
+const fragmet = (value) => {
+  const list = [];
+  for (let i = 0; i < value.filterList.length; i += value.limit) {
+    list.push(value.filterList.slice(i, i + value.limit));
+  }
+  return list;
 };
 
-initialState.filterList = initialState.videoclips;
+initialState.fragmetList = fragmet(initialState);
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
+
+  useEffect(() => {
+    const filterList = state.videoclips.filter((item) => {
+      return item.title.toLowerCase().includes(state.filter.toLowerCase()) || item.artists.toLowerCase().includes(state.filter.toLowerCase());
+
+    });
+    const fragmetList = fragmet({ ...state, filterList });
+    setState({ ...state, filterList, fragmetList });
+  }, [state, state.filter]);
+  
+
 
   const getRecentVideoclips = () => {
     const sortedVideoclips = state.videoclips.sort((a, b) => {
@@ -446,6 +470,13 @@ const useInitialState = () => {
     });
   };
 
+  const setFilterVideoclips = (videoclips) => {
+    setState({
+      ...state,
+      filterList: videoclips,
+    });
+  };
+
   const filterVideoclips = (filter) => {
     if (filter === '') {
       const allvideos = state.videoclips;
@@ -461,7 +492,8 @@ const useInitialState = () => {
         videoclip.artists.toLowerCase().includes(filter.toLowerCase())
       );
     });
-    return filteredVideoclips;
+
+    setFilterVideoclips(filteredVideoclips);
   };
 
   const getVideoclipsByLimitAndOffset = (limit, offset) => {
@@ -475,9 +507,16 @@ const useInitialState = () => {
     setState({
       ...state,
       filter: filter,
-      filterList: filterVideoclips(filter),
     });
   };
+
+  const setCurrentPage = (page) => {
+    setState({
+      ...state,
+      currentPage: page,
+    });
+  }
+
 
   return {
     state,
@@ -491,6 +530,8 @@ const useInitialState = () => {
     filterVideoclips,
     getVideoclipsByLimitAndOffset,
     setFilter,
+    setFilterVideoclips,
+    setCurrentPage,
   };
 };
 
