@@ -1,0 +1,97 @@
+@import './root.scss';
+
+.equipo-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5%;
+  list-style: none;
+  background-color: $nav_bar_links_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
+
+
+
+   .navbar{
+    color: $nav_links_white;
+    
+    .navbar button span {
+      background-color: $nav_links_white !important;
+    }
+
+    .navbar-brand {
+      color: $nav_links_white;
+    }
+
+    .nav-link {
+      background:
+        linear-gradient(to right,
+          rgba(100, 200, 200, 0),
+          rgba(100, 200, 200, 0)),
+        linear-gradient(to right,
+          $nav_links_white,
+          $nav_links_white,
+          $nav_links_white);
+      background-size: 100% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+    }
+
+    .nav-link:hover {
+      background-size: 90% 3px;
+      background-position: 50% 100%;
+      color: $nav_links_white;
+    }
+
+    span {
+      background-color: $nav_links_white !important;
+    }
+
+    .navbar-nav {
+      filter: opacity(98%);
+    }
+
+  }
+
+
+
+
+  .equipo-container_text {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 30px;
+    padding-top: 8%;
+    list-style: none;
+    background-color: $nav_bar_links_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    font-family: $font_family_primary;
+    font-weight: bold;
+    text-align: justify;
+
+    p{
+      color: $button_background_color;   
+      font-size: 0.9em;    
+    }
+
+
+
+  }
+}

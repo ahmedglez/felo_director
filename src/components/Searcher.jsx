@@ -1,13 +1,12 @@
-import { stat } from "fs";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BsSearch } from "react-icons/bs";
 import AppContext from "../context/AppContext";
 import "../styles/Searcher.scss";
 
 const Searcher = () => {
-  const { setFilter, state } = useContext(AppContext);
+  const { setFilter } = useContext(AppContext);
 
-  const handleChange = (e) => {    
+  const handleChange = (e) => {
     setFilter(e.target.value);
   };
 
