@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600;700&display=swap");
+/********Colors********/
+/* backgrounds */
+/* text */
+/********Fonts********/
+.contact-container {
+  height: 100%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/imgs/felo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-position: 20% 80%;
+  font-family: "Noto Sans", arial;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contact-container nav {
+  color: #F3F3F3;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* media querys */
+}
+.contact-container nav .navbar button span {
+  background-color: #F3F3F3 !important;
+}
+.contact-container nav .navbar-brand {
+  color: #F3F3F3;
+}
+.contact-container nav .nav-link {
+  background: linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)), linear-gradient(to right, #F3F3F3, #F3F3F3, #F3F3F3);
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+.contact-container nav .nav-link:hover {
+  background-size: 90% 3px;
+  background-position: 50% 100%;
+  color: #F3F3F3;
+}
+.contact-container nav span {
+  background-color: #F3F3F3 !important;
+}
+.contact-container nav .navbar-nav {
+  filter: opacity(98%);
+}
+@media (max-width: 768px) {
+  .contact-container nav .navbar-nav {
+    background-color: #24262B;
+  }
+}
+.contact-container .info-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #F3F3F3;
+  padding: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* media querys */
+}
+.contact-container .info-container h1 {
+  font-size: 2rem;
+  color: white;
+}
+.contact-container .info-container p {
+  width: 90%;
+  color: rgba(255, 255, 255, 0.835);
+  margin: 0 auto;
+  margin-bottom: 5%;
+  font-size: 1.2em !important;
+}
+.contact-container .info-container ul {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.811);
+  margin: 0 auto;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container .info-container ul li {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contact-container .info-container ul li strong {
+  color: rgba(255, 255, 255, 0.811);
+  margin-right: 5px;
+  font-size: 1.05em;
+}
+.contact-container .info-container ul li a {
+  color: #FC0441;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .contact-container .info-container h1 {
+    font-size: 1.5rem;
+  }
+  .contact-container .info-container p {
+    font-size: 1rem;
+  }
+  .contact-container .info-container ul {
+    font-size: 1rem;
+  }
+}
+.contact-container .footer-container {
+  margin-bottom: -3%;
+  background-color: transparent;
+}
+.contact-container .footer-container .footer-container_socials-item {
+  width: 23%;
+  padding: 5%;
+}
+.contact-container .footer-container .footer-container_socials-item svg {
+  width: 100%;
+  height: 100%;
+}
+.contact-container .footer-container .footer-container_socials-item .footer-container_socials {
+  width: 50%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  min-height: 40px;
+}
+.contact-container h3 {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.6em !important;
+  color: white !important;
+}
+.contact-container p {
+  margin-bottom: 0px;
+  font-size: 1.3rem !important;
+  color: rgba(255, 255, 255, 0.821) !important;
+}

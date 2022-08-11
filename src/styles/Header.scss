@@ -106,7 +106,7 @@ nav {
 
   nav .navbar-brand {
     width: fit-content;
-    font-size: small;
+    font-size: medium;
   }
 
   .navbar-nav {
@@ -115,8 +115,8 @@ nav {
     justify-content: center;
     text-align: center;
     height: 100vh;
-    background-color: $button_background_color;
-    filter: opacity(98%);
+    background-color: rgb(255, 255, 255);
+    filter: opacity(92%);
     display: flex;
     flex-direction: column;
 

@@ -1,0 +1,197 @@
+@import './root.scss';
+
+
+.contact-container {
+  height: 100%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/imgs/felo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-position: 20% 80%;
+  font-family: $font_family_primary;
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+
+  nav {
+    color: $nav_links_white;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+    .navbar button span {
+      background-color: $nav_links_white !important;
+    }
+
+    .navbar-brand {
+      color: $nav_links_white;
+    }
+
+    .nav-link {
+      background:
+        linear-gradient(to right,
+          rgba(100, 200, 200, 0),
+          rgba(100, 200, 200, 0)),
+        linear-gradient(to right,
+          $nav_links_white,
+          $nav_links_white,
+          $nav_links_white);
+      background-size: 100% 3px, 0 3px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 400ms;
+    }
+
+    .nav-link:hover {
+      background-size: 90% 3px;
+      background-position: 50% 100%;
+      color: $nav_links_white;
+    }
+
+    span {
+      background-color: $nav_links_white !important;
+    }
+
+    .navbar-nav {
+      filter: opacity(98%);
+    }
+
+
+    /* media querys */
+    @media (max-width: 768px) {
+      .navbar-nav {
+        background-color: $background_gray_dark;
+
+      }
+    }
+
+  }
+
+
+  .info-container {
+    width: 100%;
+    height: 100%;
+  min-height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $nav_links_white;
+    padding: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 2rem;
+      color: white;
+    }
+
+    p {
+      width: 90%;
+      color: rgba(255, 255, 255, 0.835);
+      margin: 0 auto;
+      margin-bottom: 5%;
+      font-size: 1.2em !important; ;
+    }
+
+
+    ul {
+      width: 100%;
+      color: rgba(255, 255, 255, 0.811);
+      margin: 0 auto;
+      margin-bottom: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        width: 100%;
+        list-style: none;
+        margin-bottom: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        strong {
+          color: rgba(255, 255, 255, 0.811);
+          margin-right: 5px;
+          font-size: 1.05em;
+        }
+
+        a {
+          color: $gradient_pink;
+          text-decoration: none;
+        }
+      }
+    }
+
+    /* media querys */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      ul {
+        font-size: 1rem;
+      }
+    }
+  }
+
+
+  .footer-container {
+    margin-bottom: -3%;
+    background-color: transparent;
+
+    .footer-container_socials-item {
+      width: 23%;
+      padding: 5%;
+
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+
+
+      .footer-container_socials {
+        width: 50%;
+        max-width: 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        min-height: 40px;
+      }
+    }
+  }
+
+
+  h3{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.6em !important;
+    color: white !important;
+  }
+
+  p{
+    margin-bottom: 0px;
+    font-size: 1.3rem !important;
+    color: rgba(255, 255, 255, 0.821) !important;
+  }
+
+
+
+
+
+
+}

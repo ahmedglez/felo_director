@@ -3,152 +3,139 @@
 /* backgrounds */
 /* text */
 /********Fonts********/
-.carousel-container {
+.carousel {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  overflow: hidden;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5%;
+  margin-top: 50px;
+  list-style: none;
+  background-color: transparent;
+}
+.carousel .carousel-indicators li.active {
+  background-color: #FC0441 !important;
+}
+.carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.carousel .carousel-inner .carousel-item .active {
+  display: flex !important;
+}
+.carousel .carousel-inner .carousel-item .carousel-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  overflow: hidden;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  background-color: transparent;
+  filter: brightness(60%);
+  border-radius: 15px 15px 15px 15px;
+}
+.carousel .carousel-inner .carousel-item .carousel-img img {
   width: 98%;
-  height: 100%;
-  max-height: 400px;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  margin-top: 30px;
-  padding: 0;
-  list-style: none;
-  background-color: rgba(0, 0, 0, 0.355);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
-  border-radius: 25px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.355);
-  /* media querys */
+  max-width: 1000px;
+  height: 98%;
+  max-height: 800px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 5px 3px 30px 3px rgba(0, 0, 0, 0.373);
+  z-index: 1;
 }
-.carousel-container button span::before {
-  background-color: white;
-}
-.carousel-container button span:after {
-  background-color: white;
-}
-.carousel-container .awssld__content {
-  background-color: transparent;
-}
-.carousel-container img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-height: 400px;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
-  border-radius: 25px 0px 0px 25px;
-}
-.carousel-container .carousel-wrapper {
-  width: 100%;
-  height: 100%;
-  max-height: 400px;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
-}
-.carousel-container .carousel-wrapper .carousel-container_text {
-  width: 80%;
-  height: 100%;
-  max-height: 400px;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 5%;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
-}
-.carousel-container .carousel-wrapper .carousel-container_text h1 {
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  position: absolute;
+  width: 40%;
+  margin: 0 auto;
+  top: 25%;
   font-family: "Noto Sans", arial;
-  font-size: normal normal bold 28px Noto Sans;
-  color: #F3F3F3;
   text-align: center;
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-  list-style: none;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
 }
-.carousel-container .carousel-wrapper .carousel-container_text p {
-  font-family: "Noto Sans", arial;
-  font-size: normal normal bold 22px Noto Sans;
+.carousel .carousel-inner .carousel-item .carousel-caption h5 {
   color: #F3F3F3;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-  list-style: none;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
+  font-size: 1.9em;
+  text-shadow: 2px 20px 20px rgba(0, 0, 0, 0.347);
 }
-@media (max-width: 800px) {
-  .carousel-container .carousel-wrapper {
-    width: 100%;
-    height: 100%;
-    max-height: 400px;
-    position: absolute;
-    /* get text over image */
+.carousel .carousel-inner .carousel-item .carousel-caption p {
+  color: #F3F3F3;
+  font-size: 1.2em;
+  text-shadow: 2px 20px 20px rgba(0, 0, 0, 0.347);
+}
+
+/* media querys */
+@media (max-width: 768px) {
+  .carousel {
+    max-height: 600px;
+    overflow: hidden;
   }
-  .carousel-container img {
+  .carousel .carousel-inner .carousel-item {
     width: 100%;
     height: 100%;
+    min-height: 600px;
+  }
+  .carousel .carousel-inner .carousel-item .carousel-img {
+    min-height: 600px;
     position: relative;
-    filter: brightness(0.68);
-  }
-  .carousel-container .carousel-container_text {
-    position: absolute;
-    top: 0;
-    left: 50;
     width: 100%;
     height: 100%;
-    max-height: 400px;
-    padding: 10%;
+    max-height: 800px;
   }
-  .carousel-container .carousel-container_text h1 {
-    font-size: 1.7em;
+  .carousel .carousel-inner .carousel-item .carousel-img img {
+    margin: 0 auto;
+    object-position: 20% 80%;
+    width: 100%;
+    height: 100%;
+    min-height: 580px;
+    object-fit: cover;
+    filter: brightness(70%);
   }
-  .carousel-container .carousel-container_text p {
-    font-size: 1em;
-    text-align: justify;
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: "Noto Sans", arial;
+    text-align: center;
+    padding-top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    width: 80%;
+    color: #F3F3F3;
+    font-size: 2em;
+    text-shadow: 2px 20px 20px rgba(0, 0, 0, 0.347);
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+  .carousel .carousel-inner .carousel-item .carousel-caption p {
+    width: 80%;
+    color: #F3F3F3;
+    font-size: 1.5em;
+    text-shadow: 2px 20px 20px rgba(0, 0, 0, 0.347);
   }
 }

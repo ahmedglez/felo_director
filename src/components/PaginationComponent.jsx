@@ -9,13 +9,16 @@ const PaginationComponent = () => {
 
   const handleAdd = () => {
     setCurrentPage(state.currentPage + 1);
+    window.scroll(0, 0);
   };
   const handleRest = () => {
     setCurrentPage(state.currentPage - 1);
+    window.scroll(0, 0);
   };
 
   const handleToggle = (index) => {
     setCurrentPage(index);
+    window.scroll(0, 0);
   };
 
   useEffect(() => {
